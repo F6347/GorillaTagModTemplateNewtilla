@@ -9,7 +9,7 @@
     </description>
     <authors>Graic</authors>
     <license type="expression">Apache-2.1</license>
-		<repository type="git" url="https://github.com/Graicc/GorillaTagModTemplate.git" />
+		<repository type="git" url="https://github.com/F6347/GorillaTagModTemplateNewtilla.git" />
     <packageTypes>
       <packageType name="Template" />
     </packageTypes>
