@@ -1,7 +1,7 @@
 ﻿using System;
 using BepInEx;
 using UnityEngine;
-using Utilla;
+using Newtilla;
 
 namespace GorillaTagModTemplateProject
 {
@@ -9,8 +9,8 @@ namespace GorillaTagModTemplateProject
 	/// This is your mod's main class.
 	/// </summary>
 
-	/* This attribute tells Utilla to look for [ModdedGameJoin] and [ModdedGameLeave] */
-	[ModdedGamemode]
+	
+	
 	[BepInDependency("org.legoandmars.gorillatag.utilla", "1.5.0")]
 	[BepInPlugin(PluginInfo.GUID, PluginInfo.Name, PluginInfo.Version)]
 	public class Plugin : BaseUnityPlugin
@@ -19,11 +19,13 @@ namespace GorillaTagModTemplateProject
 
 		void Start()
 		{
-			/* A lot of Gorilla Tag systems will not be set up when start is called /*
+            /* A lot of Gorilla Tag systems will not be set up when start is called /*
 			/* Put code in OnGameInitialized to avoid null references */
 
-			Utilla.Events.GameInitialized += OnGameInitialized;
-		}
+		
+            Newtilla.Newtilla.OnJoinModded += OnModdedJoined;
+            Newtilla.Newtilla.OnLeaveModded += OnModdedLeft;
+        }
 
 		void OnEnable()
 		{
@@ -52,20 +54,20 @@ namespace GorillaTagModTemplateProject
 			/* Code here runs every frame when the mod is enabled */
 		}
 
-		/* This attribute tells Utilla to call this method when a modded room is joined */
-		[ModdedGamemodeJoin]
-		public void OnJoin(string gamemode)
-		{
+        /* This attribute tells Newtilla to call this method when a modded room is joined */
+
+        void OnModdedJoined(string modeName)
+        {
 			/* Activate your mod here */
 			/* This code will run regardless of if the mod is enabled*/
 
 			inRoom = true;
 		}
 
-		/* This attribute tells Utilla to call this method when a modded room is left */
-		[ModdedGamemodeLeave]
-		public void OnLeave(string gamemode)
-		{
+        /* This attribute tells Newtilla to call this method when a modded room is left */
+
+        void OnModdedLeft(string modeName)
+        {
 			/* Deactivate your mod here */
 			/* This code will run regardless of if the mod is enabled*/
 
