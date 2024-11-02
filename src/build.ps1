@@ -1,3 +1,4 @@
+dotnet new uninstall Graic.Template.GorillaTagModTemplate.nuspec
 function Reset-Templates{
     [cmdletbinding()]
     param(
