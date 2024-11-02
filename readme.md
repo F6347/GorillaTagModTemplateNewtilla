@@ -1,12 +1,14 @@
+# WARNING! THIS IS NOT MINE!
+
+This is fully made by Graic, I just modified a few things.
+
 # Gorilla Tag Mod Template
 
 .NET Project Template for PCVR Gorilla Tag Mods
 
 ## Usage
 
-To install the template, run
-`dotnet new --install Graic.Template.GorillaTagModTemplate.nuspec` from the command line.
-The template can be used from the command line by running `dotnet new gtmod -A [Authorname]`. Command line help for the template can be found by running `dotnet new gtmod -h`.
+To install the template, run `addToVS.cmd` in the `src` folder
 
 To enable the template to be used in Visual Studio, open Visual Studio without code and navigate to `Tools/Options/Environment/Preview Features`.
 Make sure that "Show all .NET Core Templates in the New Project Dialog" is checked.
