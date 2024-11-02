@@ -8,11 +8,14 @@ This is fully made by Graic, I just modified a few things.
 
 ## Usage
 
+#### WARNING! You must have installed BePiNex (install most easily with [MMM](https://github.com/BzzzThe18th/MonkeModManager/releases/latest)), removed the folder "Utilla" inside of plugins folder, and added [Newtilla](https://github.com/Loafiat/Newtilla/releases/latest) to it.
+
 To install the template, run `addToVS.cmd` in the `src` folder
 
 To enable the template to be used in Visual Studio, open Visual Studio without code and navigate to `Tools/Options/Environment/Preview Features`.
 Make sure that "Show all .NET Core Templates in the New Project Dialog" is checked.
 The template should then appear in Visual Studio Templates, under "Gorilla Tag Mod".
+
 
 ## Parameters
 
