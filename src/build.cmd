@@ -1,3 +1,4 @@
+powershell
 function Reset-Templates{
     [cmdletbinding()]
     param(
