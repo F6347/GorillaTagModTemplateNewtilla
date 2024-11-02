@@ -1,4 +1,3 @@
-powershell
 function Reset-Templates{
     [cmdletbinding()]
     param(
@@ -14,5 +13,5 @@ function Reset-Templates{
 $MyInvocation.MyCommand.Path | Split-Path | Push-Location # Run from this script's directory
 Reset-Templates
 nuget.exe pack .\GorillaTagModTemplate.nuspec -NoDefaultExcludes -OutputDirectory .\nupkg
-dotnet new --install nupkg\*.nupkg
+dotnet new install nupkg\*.nupkg
 Pop-Location
